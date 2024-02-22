@@ -39,6 +39,7 @@ namespace WpfWebSHOP
         {
             FetchDataFromApiDelete();
         }
+
         private async Task FetchDataFromApiDelete()
         {
             List<Book> books = new List<Book>();
@@ -79,6 +80,13 @@ namespace WpfWebSHOP
             }
 
             // Return an empty list if there is an error or no data retrieved
+        }
+
+        private void Calback(object sender, RoutedEventArgs e)
+        {
+            MainWindow buyShopBook = new MainWindow();
+            buyShopBook.Show(); 
+            this.Close();
         }
     }
 }

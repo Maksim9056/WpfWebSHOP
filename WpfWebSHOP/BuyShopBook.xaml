@@ -31,6 +31,8 @@
                 <Label x:Name="Time"/>
             </StackPanel>
             <Button Content="Купить" HorizontalAlignment="Left" Margin="0,20,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click"/>
+            <Button Content="Назад" Width="100" Click="Calback" Margin="-290,-20,0,0"/>
+
         </StackPanel>
     </Grid>
 </Window>
