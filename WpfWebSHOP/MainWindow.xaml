@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfWebSHOP"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="900">
+        Title="WebSiteShop" Height="450" Width="900">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="123*"/>
-            <ColumnDefinition Width="277*"/>
+            <ColumnDefinition Width="76*"/>
+            <ColumnDefinition Width="201*"/>
+            <ColumnDefinition Width="623*"/>
         </Grid.ColumnDefinitions>
         <DataGrid x:Name="Data" 
                  SelectedCellsChanged="Data_SelectedCellsChanged"
@@ -23,7 +24,7 @@
                   HorizontalAlignment="Left"  
             VerticalAlignment="Top"
             HorizontalScrollBarVisibility="Auto" 
-                  VerticalScrollBarVisibility="Auto" Margin="10,10,0,0" Width="440" RenderTransformOrigin="0.576,0.537" Grid.ColumnSpan="2">
+                  VerticalScrollBarVisibility="Auto" Margin="10,10,0,0" Width="440" RenderTransformOrigin="0.576,0.537" Grid.ColumnSpan="3">
             <DataGrid.Columns>
                 <DataGridTextColumn Header ="ID"  Binding="{Binding Id}" Width="Auto" />
                 <DataGridTextColumn Header="Author" Binding="{Binding Author}"  Width="Auto"  />
