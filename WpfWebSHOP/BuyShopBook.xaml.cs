@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Library.LibraryClass;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,10 @@ namespace WpfWebSHOP
     public partial class BuyShopBook : Window
     {
        public int id {  get; set; }
+        /// <summary>
+        /// Инициализация формы с параметрами
+        /// </summary>
+        /// <param name="book"></param>
         public BuyShopBook(Book book)
         {
             InitializeComponent();
@@ -35,11 +40,20 @@ namespace WpfWebSHOP
 
         }
 
+        /// <summary>
+        /// Нажатия на кнопку
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             FetchDataFromApiDelete();
         }
 
+        /// <summary>
+        /// Блок работы С api Удаление Delete
+        /// </summary>
+        /// <returns></returns>
         private async Task FetchDataFromApiDelete()
         {
             List<Book> books = new List<Book>();
@@ -68,7 +82,7 @@ namespace WpfWebSHOP
                     {
                         MessageBox.Show("Failed to retrieve data from the API. Status code: " + response.StatusCode);
                     }
-                   MainWindow buyShopBook = new MainWindow(); // создаем окно BuyShopBook и передаем ему объект book в качестве параметра
+                   MainWindow buyShopBook = new MainWindow(); 
                     buyShopBook.Show(); // показываем окно
                     this.Close();
                 }
